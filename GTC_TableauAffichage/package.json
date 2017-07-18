@@ -1,0 +1,20 @@
+{
+  "name": "gtc_tableauaffichage",
+  "version": "0.0.1",
+  "description": "Système d'affichage des tables de jdr",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TroisBieres/GTC/tree/master/GTC_TableauAffichage"
+  },
+  "author": "Antony Turpin",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}
