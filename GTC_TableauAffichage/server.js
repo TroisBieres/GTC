@@ -47,6 +47,6 @@ app2.get('/joueur', (req, res) => {
   res.render('pages/test/joueur')
 })
 
-app.listen(8090, function () {
+app2.listen(8090, function () {
   console.log('Example app listening on port 8090!')
 })
