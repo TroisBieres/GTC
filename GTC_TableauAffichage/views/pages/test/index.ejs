@@ -1,20 +1,45 @@
 <% include header %>
 
-<div class="ui top attached tabular menu">
-  <a class="item" data-tab="first">First</a>
-  <a class="item active" data-tab="second">Second</a>
-  <a class="item" data-tab="third">Third</a>
-</div>
-<div class="ui bottom attached tab segment" data-tab="first">First </div>
-<div class="ui bottom attached tab segment active" data-tab="second">Second </div>
-<div class="ui bottom attached tab segment" data-tab="third">Third </div>
+  <h1>Section Administration</h1>
 
+  <div class="ui top red inverted attached tabular menu">
+    <button class="ui item" onclick="openTab(event, 'London')">London</button>
+    <button class="ui item" onclick="openTab(event, 'Paris')">Paris</button>
+    <button class="ui item" onclick="openTab(event, 'Tokyo')">Tokyo</button>
+    <button class="ui item" onclick="openTab(event, 'London')">London</button>
+    <button class="ui item" onclick="openTab(event, 'Paris')">Paris</button>
+    <button class="ui item" onclick="openTab(event, 'Tokyo')">Tokyo</button>
+  </div>
 
-<div class="ui three item menu">
-  <a class="item">Editorials</a>
-  <a class="item active">Reviews</a>
-  <a class="item">Upcoming Events</a>
-</div>
+  <div id="London" class="ui bottom attached tab segment">
+    <h3>London</h3>
+    <p>London is the capital city of England.</p>
+  </div>
 
+  <div id="Paris" class="ui bottom attached tab segment">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p>
+  </div>
 
-<% include footer %>
+  <div id="Tokyo" class="ui bottom attached tab segment">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      var i, segment, tablinks;
+      tabcontent = document.getElementsByClassName("segment");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("ui item");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+
+  <% include footer %>
