@@ -3,13 +3,16 @@
   <h1>Section Administration</h1>
 
   <div class="ui top red inverted attached tabular menu">
+<!--
     <button class="ui item" onclick="openTab(event, 'Association')"> Association </button>
+-->
     <button class="ui item" onclick="openTab(event, 'Convention')"> Convention </button>
     <button class="ui item" onclick="openTab(event, 'Disponibilite')">Disponibilité</button>
-    <button class="ui item" onclick="openTab(event, 'Tokyo')">Tokyo</button>
-    <button class="ui item" onclick="openTab(event, 'London')">London</button>
-    <button class="ui item" onclick="openTab(event, 'Paris')">Paris</button>
-    <button class="ui item" onclick="openTab(event, 'Tokyo')">Tokyo</button>
+    <button class="ui item" onclick="openTab(event, 'Partie')"> Partie </button>
+    <button class="ui item" onclick="openTab(event, 'Scenario')"> Scenario </button>
+    <button class="ui item" onclick="openTab(event, 'Systeme')"> Univers </button>
+    <button class="ui item" onclick="openTab(event, 'MotCle')"> Genre </button>
+    <button class="ui item" onclick="openTab(event, 'Theme')">Univers &harr; Genre</button>
   </div>
 
   <div id="Association" class="ui bottom attached tab segment">
@@ -21,21 +24,21 @@
   <div id="Disponibilite" class="ui bottom attached tab segment">
     <% include addDisponibilite %>
   </div>
-  <div id="London" class="ui bottom attached tab segment">
-    <h3>London</h3>
-    <p>London is the capital city of England.</p>
+  <div id="Partie" class="ui bottom attached tab segment">
+    <% include addPartie %>
   </div>
-
-  <div id="Paris" class="ui bottom attached tab segment">
-    <h3>Paris</h3>
-    <p>Paris is the capital of France.</p>
+  <div id="Scenario" class="ui bottom attached tab segment">
+    <% include addScenario %>
   </div>
-
-  <div id="Tokyo" class="ui bottom attached tab segment">
-    <h3>Tokyo</h3>
-    <p>Tokyo is the capital of Japan.</p>
+  <div id="MotCle" class="ui bottom attached tab segment">
+    <% include addMotCle %>
   </div>
-
+  <div id="Theme" class="ui bottom attached tab segment">
+    <% include addTheme %>
+  </div>
+  <div id="Systeme" class="ui bottom attached tab segment">
+    <% include addSysteme%>
+  </div>
   <script>
     function openTab(evt, tabName) {
       var i, segment, tablinks;
