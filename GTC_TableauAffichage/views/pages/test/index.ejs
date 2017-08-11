@@ -3,14 +3,24 @@
   <h1>Section Administration</h1>
 
   <div class="ui top red inverted attached tabular menu">
-    <button class="ui item" onclick="openTab(event, 'London')">London</button>
-    <button class="ui item" onclick="openTab(event, 'Paris')">Paris</button>
+    <button class="ui item" onclick="openTab(event, 'Association')"> Association </button>
+    <button class="ui item" onclick="openTab(event, 'Convention')"> Convention </button>
+    <button class="ui item" onclick="openTab(event, 'Disponibilite')">Disponibilité</button>
     <button class="ui item" onclick="openTab(event, 'Tokyo')">Tokyo</button>
     <button class="ui item" onclick="openTab(event, 'London')">London</button>
     <button class="ui item" onclick="openTab(event, 'Paris')">Paris</button>
     <button class="ui item" onclick="openTab(event, 'Tokyo')">Tokyo</button>
   </div>
 
+  <div id="Association" class="ui bottom attached tab segment">
+    <% include addAssociation %>
+  </div>
+  <div id="Convention" class="ui bottom attached tab segment">
+    <% include addConvention %>
+  </div>
+  <div id="Disponibilite" class="ui bottom attached tab segment">
+    <% include addDisponibilite %>
+  </div>
   <div id="London" class="ui bottom attached tab segment">
     <h3>London</h3>
     <p>London is the capital city of England.</p>

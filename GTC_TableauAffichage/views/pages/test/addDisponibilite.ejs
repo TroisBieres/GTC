@@ -1,0 +1,41 @@
+ <form class="ui form" method="post" action="/">
+    <h4 class="ui dividing header">Ajout d'une disponibilité: </h4>
+    <div class="field">
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" placeholder="Nom de la convention">
+    </div>
+    <div class="two fields">
+      <div class="field">
+        <label for="schedule1">Jour</label>
+        <input type="date" id="schedule1" name="schedule1"/>
+      </div>
+      <div class="field">
+        <label for="schedule2">Horaire</label>
+        <input type="time" id="schedule2" name="schedule2"/>
+      </div>
+    </div>
+    <div class="field">
+      <label for="scenario">Scenario</label>
+      <select class="ui fluid dropdown" id="scenario" name="scenario">
+        <option value="monsieur">Monsieur Monsieur</option>
+        <option value="madame">Madame Madame</option>
+        <option value="patate">Patate Patate</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="convention">Convention</label>
+      <select class="ui fluid dropdown" id="convention" name="convention">
+        <option value="conv1">Convention 1</option>
+        <option value="conv2">Convention 2</option>
+        <option value="conv3">Convention 3</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="name">Numéro de la table</label>
+      <input id="tablenumber" type="number" min="1" max="15" step="1"/>
+    </div>
+    <button type="submit" class="ui blue labeled submit icon button">
+      <i class="icon edit"></i> Envoyer
+    </button>
+
+</form>
