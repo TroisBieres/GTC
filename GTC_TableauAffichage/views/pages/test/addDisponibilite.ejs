@@ -1,4 +1,5 @@
  <form class="ui form" method="post" action="/">
+   <input type="hidden" name="tableName" value="Disponibilite">
     <h4 class="ui dividing header">Ajout d'une disponibilité: </h4>
     <div class="field">
       <label for="convention">Convention</label>
@@ -29,7 +30,7 @@
     </div>
     <div class="field">
       <label for="name">Numéro de la table</label>
-      <input id="tablenumber" type="number" min="1" max="15" step="1"/>
+      <input id="tablenumber" name="tablenumber" type="number" min="1" max="15" step="1"/>
     </div>
     <button type="submit" class="ui blue labeled submit icon button">
       <i class="icon edit"></i> Envoyer

@@ -1,4 +1,5 @@
 <form class="ui form" method="post" action="/">
+  <input type="hidden" name="tableName" value="Scenario">
     <h4 class="ui dividing header">Ajout d'un scénario: </h4>
     <div class="field">
       <label for="name">Nom</label>
@@ -6,7 +7,7 @@
     </div>
     <div class="field">
       <label for="playerquantity">Nombre de joueurs</label>
-      <input id="playerquantity" type="number" min="1" step="1"/>
+      <input id="playerquantity" name="playerquantity" type="number" min="1" step="1"/>
     </div>
     <div class="field">
       <label for="duration">Durée maximale de la table :</label>

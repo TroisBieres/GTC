@@ -20,31 +20,19 @@ app.listen(8080, function () {
 // Serveur secondaire pour les tests
 let express2 = require('express')
 let app2 = express2()
+let bodyParser2 = require('body-parser')
 
 app2.set('view engine', 'ejs')
 app2.use('/assets', express.static('public'))
+app2.use(bodyParser2.urlencoded({ extended: false }))
+app2.use(bodyParser2.json())
 
 app2.get('/', (req, res) => {
   res.render('pages/test/index')
 })
 
-app2.get('/convention', (req, res) => {
-  res.render('pages/test/convention')
-})
-
-app2.get('/association', (req, res) => {
-  res.render('pages/test/association')
-})
-app2.get('/responsabilite', (req, res) => {
-  res.render('pages/test/responsabilite')
-})
-
-app2.get('/editeur', (req, res) => {
-  res.render('pages/test/editeur')
-})
-
-app2.get('/joueur', (req, res) => {
-  res.render('pages/test/joueur')
+app2.post('/', (req, res) => {
+  console.log(req.body)
 })
 
 app2.listen(8090, function () {
