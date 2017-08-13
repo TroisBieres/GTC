@@ -32,7 +32,11 @@ app2.get('/', (req, res) => {
 })
 
 app2.post('/', (req, res) => {
-  console.log(req.body)
+  let Save = require('./models/save')
+  Save.create(req.body, function () {
+    console.log(req.body)
+  })
+  res.redirect('/')
 })
 
 app2.listen(8090, function () {
