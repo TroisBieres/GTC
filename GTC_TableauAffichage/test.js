@@ -1,6 +1,7 @@
 var mysql = require('promise-mysql')
 
-function getAll (a) {
+function getAll (array) {
+  let retour = {}
   var pool = mysql.createPool({
     host: '192.168.0.42',
     user: 'testuser',
@@ -9,13 +10,17 @@ function getAll (a) {
     connectionLimit: 10
   })
 
-  for (var i = 0; i < a.length; i++) {
-    pool.query('select * from ' + a[i]).then(function (rows) {
-    // Logs out a list of hobbits
-      console.log(rows)
+  for (var i = 0; i < array.length; i++) {
+    var test;
+    test = pool.query('select * from ' + array[i]).then(function (rows) {
+      console.log('i=', i)
+      retour[array[i]] = rows
+      if (i === array.length)
+        pool.end()
     })
+    console.log(test)
   }
 }
 
 //  Convention, Scenario, Joueur, Systeme, MotCle
-getAll(['T_Convention', 'T_Association', 'T_Joueur', 'T_Systeme', 'T_MotCle'])
+var lol = getAll(['T_Convention', 'T_Association', 'T_Joueur', 'T_Systeme', 'T_MotCle'])
