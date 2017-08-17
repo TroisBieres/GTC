@@ -11,16 +11,20 @@ function getAll (array) {
   })
 
   for (var i = 0; i < array.length; i++) {
-    var test;
+    var test
     test = pool.query('select * from ' + array[i]).then(function (rows) {
       console.log('i=', i)
-      retour[array[i]] = rows
-      if (i === array.length)
+      console.log(rows)
+      if (i === array.length) {
         pool.end()
+      }
     })
     console.log(test)
   }
+  return retour
 }
 
 //  Convention, Scenario, Joueur, Systeme, MotCle
 var lol = getAll(['T_Convention', 'T_Association', 'T_Joueur', 'T_Systeme', 'T_MotCle'])
+
+console.log(lol)

@@ -1,0 +1,25 @@
+{
+  "name": "T_Association",
+  "plural": "T_Associations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Association": {
+      "type": "number",
+      "required": true,
+      "id": true
+    },
+    "Ass_Name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
