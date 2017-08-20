@@ -1,5 +1,5 @@
-'use strict';
+'use strict'
 
-module.exports = function(Tassociation) {
+module.exports = function (Tassociation) {
 
-};
+}

@@ -1,5 +1,5 @@
 {
-  "name": "T_Association",
+  "name": "T_MotCle",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,13 +7,14 @@
   },
   "forceId": false,
   "properties": {
-    "id_Association": {
+    "id_MotCle": {
       "type": "number",
       "id": true,
       "required": true
     },
-    "Ass_Name": {
+    "MCl_Name": {
       "type": "string",
+      "id": true,
       "required": true
     }
   },

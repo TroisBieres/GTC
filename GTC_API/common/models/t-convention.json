@@ -1,5 +1,5 @@
 {
-  "name": "T_Association",
+  "name": "T_Convention",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,13 +7,25 @@
   },
   "forceId": false,
   "properties": {
-    "id_Association": {
+    "id_Convention": {
       "type": "number",
       "id": true,
       "required": true
     },
-    "Ass_Name": {
+    "Con_Name":{
       "type": "string",
+      "required": true
+    },
+    "Con_TableQuantity": {
+      "type": "number",
+      "required": true
+    },
+    "Con_StartDate": {
+      "type": "date",
+      "required": true
+    },
+    "Con_EndDate": {
+      "type": "date",
       "required": true
     }
   },

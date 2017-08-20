@@ -1,5 +1,5 @@
 {
-  "name": "T_Association",
+  "name": "T_Joueur",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,12 +7,24 @@
   },
   "forceId": false,
   "properties": {
-    "id_Association": {
+    "id_Joueur": {
       "type": "number",
       "id": true,
       "required": true
     },
-    "Ass_Name": {
+    "Jou_FirstName": {
+      "type": "string",
+      "required": true
+    },
+    "Jou_LastName": {
+      "type": "string",
+      "required": true
+    },
+    "Jou_Mail": {
+      "type": "string",
+      "required": false
+    },
+    "Jou_TelNumber": {
       "type": "string",
       "required": true
     }

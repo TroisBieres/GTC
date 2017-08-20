@@ -38,5 +38,41 @@
   "T_Association": {
     "dataSource": "GTC_DataBase",
     "public": true
+  },
+  "T_Responsabilite": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Editeur": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_MotCle": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Theme": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Partie": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Joueur": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Convention": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Disponibilite": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Scenario": {
+    "dataSource": "GTC_DataBase",
+    "public": true
   }
 }

@@ -1,0 +1,42 @@
+{
+  "name": "T_Scenario",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "id_Scenario": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "Sce_Name": {
+      "type": "string"
+    },
+    "Sce_NumberOfPlayers": {
+      "type": "number",
+      "required": true
+    },
+    "Sce_Duration": {
+      "type": "number",
+      "required": true
+    },
+    "Sce_Description": {
+      "type": "string"
+    },
+    "id_Organisateur": {
+      "type": "number",
+      "required": true
+    },
+    "id_Systeme": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,5 +1,5 @@
 {
-  "name": "T_Association",
+  "name": "T_Responsabilite",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,12 +7,12 @@
   },
   "forceId": false,
   "properties": {
-    "id_Association": {
+    "id_Responsabilite": {
       "type": "number",
       "id": true,
       "required": true
     },
-    "Ass_Name": {
+    "Res_Name": {
       "type": "string",
       "required": true
     }

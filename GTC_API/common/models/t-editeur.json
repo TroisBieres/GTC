@@ -1,5 +1,5 @@
 {
-  "name": "T_Association",
+  "name": "T_Editeur",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,14 +7,18 @@
   },
   "forceId": false,
   "properties": {
-    "id_Association": {
+    "id_Editeur": {
       "type": "number",
       "id": true,
       "required": true
     },
-    "Ass_Name": {
+    "Edi_Name": {
       "type": "string",
       "required": true
+    },
+    "Edi_Website": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
