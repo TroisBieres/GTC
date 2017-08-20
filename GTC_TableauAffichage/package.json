@@ -18,6 +18,7 @@
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "promise-mysql": "^3.0.2",
-    "semantic-ui": "^2.2.11"
+    "semantic-ui": "^2.2.11",
+    "xmlhttprequest": "^1.8.0"
   }
 }
