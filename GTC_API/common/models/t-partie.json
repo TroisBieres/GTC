@@ -1,0 +1,24 @@
+{
+  "name": "T_Partie",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "id_Disponibilite": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "id_Joueur": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
