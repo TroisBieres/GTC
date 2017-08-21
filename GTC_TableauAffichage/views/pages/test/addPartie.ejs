@@ -1,3 +1,4 @@
+<% include header %>
  <form class="ui form" method="post" action="/">
    <input type="hidden" name="tableName" value="Partie">
     <h4 class="ui dividing header">Ajout d'une partie: </h4>
@@ -8,9 +9,9 @@
                 name="player"
                 required>
         <option value="" selected disabled>Choisir un joueur</option>
-        <option value="monsieur">Monsieur Monsieur</option>
-        <option value="madame">Madame Madame</option>
-        <option value="patate">Patate Patate</option>
+        <% for(var i=0; i<Joueur.length; i++) {%>
+          <option value="monsieur"> <%= Joueur[i] %></option>
+        <% } %>
       </select>
     </div>
     <div class="field">
@@ -30,3 +31,4 @@
     </button>
 
 </form>
+<% include footer %>

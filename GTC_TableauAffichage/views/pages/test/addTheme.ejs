@@ -1,7 +1,4 @@
-<script>
-  let Save = require('../../../models/save')
-  Save.getAll("T_Association")
-</script>
+<% include header %>
  <form class="ui form" method="post" action="/">
    <input type="hidden" name="tableName" value="Theme">
     <h4 class="ui dividing header">Ajout d'un genre à un univers: </h4>
@@ -33,3 +30,4 @@
       <i class="icon edit"></i> Envoyer
     </button>
 </form>
+<% include footer %>
