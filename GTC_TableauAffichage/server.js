@@ -39,7 +39,7 @@ app2.get('/Convention', (req, res) => {
 
 app2.get('/Disponibilite', (req, res) => {
   SaveAPI.getAllFrom('T_Convention', {}, (res2) => {
-    SaveAPI.getAllFrom('T_Scenario', res2, (res3) => {
+    SaveAPI.getAllFrom('V_Scenario', res2, (res3) => {
       console.log(res3)
       res.render('pages/test/addDisponibilite', res3)
     })

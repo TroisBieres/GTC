@@ -1,5 +1,5 @@
 {
-  "name": "T_Convention",
+  "name": "V_Scenario",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,25 +7,35 @@
   },
   "forceId": false,
   "properties": {
-    "id_Convention": {
+    "id_Scenario": {
       "type": "number",
       "id": true,
       "required": true
     },
-    "Con_Name": {
-      "type": "string",
-      "required": true
+    "Sce_Name": {
+      "type": "string"
     },
-    "Con_TableQuantity": {
+    "Sce_NumberOfPlayers": {
       "type": "number",
       "required": true
     },
-    "Con_StartDate": {
-      "type": "date",
+    "Sce_Duration": {
+      "type": "number",
       "required": true
     },
-    "Con_EndDate": {
-      "type": "date",
+    "Sce_Description": {
+      "type": "string"
+    },
+    "Sys_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Org_FirstName": {
+      "type": "string",
+      "required": true
+    },
+    "Org_LastName": {
+      "type": "string",
       "required": true
     }
   },

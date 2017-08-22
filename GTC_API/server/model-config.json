@@ -78,5 +78,9 @@
   "T_Scenario": {
     "dataSource": "GTC_DataBase",
     "public": true
+  },
+  "V_Scenario": {
+    "dataSource": "GTC_DataBase",
+    "public": true
   }
 }

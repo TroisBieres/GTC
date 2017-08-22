@@ -9,9 +9,11 @@
                 name="convention"
                 required>
         <option value="" selected disabled>Nom de la convention</option>
-        <option value="conv1">Convention 1</option>
-        <option value="conv2">Convention 2</option>
-        <option value="conv3">Convention 3</option>
+        <% for(var i=0; i<T_Convention.length; i++) {%>
+          <option value=<%= T_Convention[i].id_Convention %>>
+              <%= T_Convention[i].Con_Name %>
+          </option>
+        <% } %>
       </select>
     </div>
     <div class="field">
@@ -21,9 +23,11 @@
                 name="scenario"
                 required>
         <option value="" selected disabled>Nom du Scénario</option>
-        <option value="monsieur">Monsieur Monsieur</option>
-        <option value="madame">Madame Madame</option>
-        <option value="patate">Patate Patate</option>
+        <% for(var i=0; i<V_Scenario.length; i++) {%>
+          <option value=<%= V_Scenario[i].id_Scenario %>>
+            <%= V_Scenario[i].Sce_Name %>
+          </option>
+        <% } %>
       </select>
     </div>
     <div class="field">
