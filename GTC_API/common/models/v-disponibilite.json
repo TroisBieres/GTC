@@ -1,0 +1,54 @@
+{
+  "name": "V_Disponibilite",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "id_Disponibilite": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "Dis_Schedule": {
+      "type": "date",
+      "required": true
+    },
+    "Dis_TableNumber": {
+      "type": "number"
+    },
+    "Con_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Con_StartDate": {
+      "type": "date",
+      "required": true
+    },
+    "Con_EndDate": {
+      "type": "date",
+      "required": true
+    },
+    "Sce_Name": {
+      "type": "string"
+    },
+    "Sce_NumberOfPlayers": {
+      "type": "number",
+      "required": true
+    },
+    "Sce_Duration": {
+      "type": "number",
+      "required": true
+    },
+    "Sys_Name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

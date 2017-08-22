@@ -20,3 +20,10 @@ class Save {
 }
 
 module.exports = Save
+
+/*
+SELECT *
+FROM GestionTableConv.T_Disponibilite dis INNER JOIN GestionTableConv.T_Convention con INNER JOIN GestionTableConv.T_Scenario sce
+WHERE sce.id_scenario = dis.id_scenario
+AND con.id_convention = dis.id_convention
+*/

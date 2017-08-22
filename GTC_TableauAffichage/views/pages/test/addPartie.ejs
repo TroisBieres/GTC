@@ -9,8 +9,8 @@
                 name="player"
                 required>
         <option value="" selected disabled>Choisir un joueur</option>
-        <% for(var i=0; i<Joueur.length; i++) {%>
-          <option value="monsieur"> <%= Joueur[i] %></option>
+        <% for(var i=0; i<T_Joueur.length; i++) {%>
+          <option value=<%= T_Joueur[i].id_Joueur %>> <%= T_Joueur[i].Jou_FirstName %> <%= T_Joueur[i].Jou_LastName %></option>
         <% } %>
       </select>
     </div>
@@ -21,9 +21,14 @@
                 name="disponibilite"
                 required>
         <option value="" selected disabled>Choisir une disponibilité</option>
-        <option value="dispo1">Disponibilité 1</option>
-        <option value="dispo2">Disponibilité 2</option>
-        <option value="dispo3">Disponibilité 3</option>
+        <% for(var i=0; i<V_Disponibilite.length; i++) {%>
+          <option value=<%= V_Disponibilite[i].id_Disponibilite %>>
+            <%= V_Disponibilite[i].Con_Name %>:
+            <%= V_Disponibilite[i].Sys_Name %> -
+            <%= V_Disponibilite[i].Sce_Name %> |
+            <%= V_Disponibilite[i].Dis_Schedule %>
+          </option>
+        <% } %>
       </select>
     </div>
     <button type="submit" class="ui blue labeled submit icon button">

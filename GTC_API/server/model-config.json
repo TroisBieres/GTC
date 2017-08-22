@@ -71,6 +71,10 @@
     "dataSource": "GTC_DataBase",
     "public": true
   },
+  "V_Disponibilite": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
   "T_Scenario": {
     "dataSource": "GTC_DataBase",
     "public": true
