@@ -60,7 +60,10 @@ app2.get('/Partie', (req, res) => {
 })
 
 app2.get('/Scenario', (req, res) => {
-  res.render('pages/test/addScenario', {'informations': ['lala', 'bidule']})
+  SaveAPI.getAllFrom('T_Systeme', {}, (res2) => {
+    console.log(res2)
+    res.render('pages/test/addScenario', res2)
+  })
 })
 
 app2.get('/Systeme', (req, res) => {

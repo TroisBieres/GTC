@@ -4,7 +4,7 @@
     <h4 class="ui dividing header">Ajout d'un scénario: </h4>
     <div class="field">
       <label for="name">Nom</label>
-      <input type="text" id="name" name="name" placeholder="Nom de la convention">
+      <input type="text" id="name" name="name" placeholder="Nom du scenario">
     </div>
     <div class="field">
       <label for="playerquantity">Nombre de joueurs</label>
@@ -21,9 +21,11 @@
                 name="idsystem"
                 required>
         <option value="" selected disabled>Choisir un univers</option>
-        <option value="idsys1">Monsieur Monsieur</option>
-        <option value="idsys2">Madame Madame</option>
-        <option value="idsys3">Patate Patate</option>
+        <% for(var i=0; i < T_Systeme.length; i++) {%>
+          <option value=<%= T_Systeme[i].id_Systeme %>>
+            <%= T_Systeme[i].Sys_Name %>
+          </option>
+        <% } %>
       </select>
     </div>
     <button type="submit" class="ui blue labeled submit icon button">
