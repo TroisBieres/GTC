@@ -9,9 +9,11 @@
                 name="idsystem"
                 required>
         <option value="" selected disabled>Choisir un univers</option>
-        <option value="idsyst1">Univers 1</option>
-        <option value="idsyst2">Univers 2</option>
-        <option value="idsyst3">Univers 3</option>
+        <% for(var i=0; i < T_Systeme.length; i++) {%>
+          <option value=<%= T_Systeme[i].id_Systeme %>>
+            <%= T_Systeme[i].Sys_Name %>
+          </option>
+        <% } %>
       </select>
     </div>
     <div class="field">
@@ -21,9 +23,11 @@
                name="idmotcle"
                required>
         <option value="" selected disabled>Choisir un genre</option>
-        <option value="idmotcle1">Steam (Pas Punk)</option>
-        <option value="idmotcle2">Ero-nique Fantasy</option>
-        <option value="idmotcle3">Monsieur Patate</option>
+        <% for(var i=0; i < T_MotCle.length; i++) {%>
+          <option value=<%= T_MotCle[i].id_MotCle %>>
+            <%= T_MotCle[i].MCl_Name %>
+          </option>
+        <% } %>
       </select>
     </div>
     <button type="submit" class="ui blue labeled submit icon button">
