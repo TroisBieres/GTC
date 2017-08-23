@@ -34,26 +34,24 @@ app2.get('/', (req, res) => {
 
 // Routing GET
 app2.get('/Convention', (req, res) => {
-  res.render('pages/test/addConvention', {'informations': ['lala', 'bidule']})
+  res.render('pages/test/addConvention')
 })
 
 app2.get('/Disponibilite', (req, res) => {
   SaveAPI.getAllFrom('T_Convention', {}, (res2) => {
     SaveAPI.getAllFrom('V_Scenario', res2, (res3) => {
-      console.log(res3)
       res.render('pages/test/addDisponibilite', res3)
     })
   })
 })
 
 app2.get('/MotCle', (req, res) => {
-  res.render('pages/test/addMotCle', {'informations': ['lala', 'bidule']})
+  res.render('pages/test/addMotCle')
 })
 
 app2.get('/Partie', (req, res) => {
   SaveAPI.getAllFrom('T_Joueur', {}, (res2) => {
     SaveAPI.getAllFrom('V_Disponibilite', res2, (res3) => {
-      console.log(res3)
       res.render('pages/test/addPartie', res3)
     })
   })
@@ -61,22 +59,27 @@ app2.get('/Partie', (req, res) => {
 
 app2.get('/Scenario', (req, res) => {
   SaveAPI.getAllFrom('T_Systeme', {}, (res2) => {
-    console.log(res2)
     res.render('pages/test/addScenario', res2)
   })
 })
 
 app2.get('/Systeme', (req, res) => {
-  res.render('pages/test/addSysteme', {'Joueur': 'Patate'})
+  res.render('pages/test/addSysteme')
 })
 
 app2.get('/Theme', (req, res) => {
-  res.render('pages/test/addTheme', {'Joueur': 'Patate'})
+  SaveAPI.getAllFrom('T_Systeme', {}, (res2) => {
+    SaveAPI.getAllFrom('T_MotCle', res2, (res3) => {
+      res.render('pages/test/addTheme', res3)
+    })
+  })
 })
 
   // Methodes POST
 
 app2.post('/', (req, res) => {
+  console.log('========req========')
+  console.log(req.body)
   res.redirect('/')
 })
 
