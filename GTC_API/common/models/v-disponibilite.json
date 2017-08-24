@@ -1,16 +1,13 @@
 {
   "name": "V_Disponibilite",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_Disponibilite": {
       "type": "number",
-      "id": true,
-      "required": true
+      "id": true
     },
     "Dis_Schedule": {
       "type": "date",

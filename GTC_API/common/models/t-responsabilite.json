@@ -1,16 +1,13 @@
 {
   "name": "T_Responsabilite",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_Responsabilite": {
       "type": "number",
-      "id": true,
-      "required": true
+      "id": true
     },
     "Res_Name": {
       "type": "string",

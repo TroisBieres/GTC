@@ -1,16 +1,13 @@
 {
   "name": "T_MotCle",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_MotCle": {
       "type": "number",
-      "id": true,
-      "required": true
+      "id": true
     },
     "MCl_Name": {
       "type": "string",

@@ -1,11 +1,9 @@
 {
   "name": "T_Theme",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_Systeme": {
       "type": "number",

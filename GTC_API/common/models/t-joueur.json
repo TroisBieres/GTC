@@ -1,16 +1,13 @@
 {
   "name": "T_Joueur",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_Joueur": {
       "type": "number",
-      "id": true,
-      "required": true
+      "id": true
     },
     "Jou_FirstName": {
       "type": "string",

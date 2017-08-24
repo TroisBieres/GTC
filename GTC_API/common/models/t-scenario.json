@@ -1,16 +1,13 @@
 {
   "name": "T_Scenario",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_Scenario": {
       "type": "number",
-      "id": true,
-      "required": true
+      "id": true
     },
     "Sce_Name": {
       "type": "string"

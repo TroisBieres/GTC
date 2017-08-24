@@ -1,16 +1,13 @@
 {
   "name": "T_Systeme",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_Systeme": {
       "type": "number",
-      "id": true,
-      "required": true
+      "id": true
     },
     "Sys_Name": {
       "type": "string",

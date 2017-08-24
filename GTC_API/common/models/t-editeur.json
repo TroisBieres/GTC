@@ -1,16 +1,13 @@
 {
   "name": "T_Editeur",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_Editeur": {
       "type": "number",
-      "id": true,
-      "required": true
+      "id": true
     },
     "Edi_Name": {
       "type": "string",

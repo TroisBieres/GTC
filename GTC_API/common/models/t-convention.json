@@ -1,16 +1,13 @@
 {
   "name": "T_Convention",
   "base": "PersistedModel",
-  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
     "id_Convention": {
       "type": "number",
-      "id": true,
-      "required": true
+      "id": true
     },
     "Con_Name": {
       "type": "string",
