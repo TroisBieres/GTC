@@ -8,7 +8,7 @@
     "id_Association": {
       "type": "number",
       "id": true
-      },
+    },
     "Ass_Name": {
       "type": "string",
       "required": true

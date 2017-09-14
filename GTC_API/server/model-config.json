@@ -86,5 +86,9 @@
   "T_Systeme": {
     "dataSource": "GTC_DataBase",
     "public": true
+  },
+  "V_Partie": {
+    "dataSource": "GTC_DataBase",
+    "public": true
   }
 }

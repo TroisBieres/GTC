@@ -10,60 +10,16 @@
   </tr>
   </thead>
   <tbody>
+    <% for(var i=0; i < V_Partie.length; i++) {%>
     <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
+      <td><%= V_Partie[i].Sys_Name %> - <%= V_Partie[i].Sce_Name %><br>
+        <%= V_Partie[i].MCl_Name %></td>
+      <td class="center aligned"><%= V_Partie[i].Dis_Schedule %></td>
+      <td class="center aligned"><%= V_Partie[i].Sce_Duration %></td>
+      <td class="center aligned"><%= V_Partie[i].occurency %> /
+      <%= V_Partie[i].Sce_NumberOfPlayers %></td>
     </tr>
-    <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
-    </tr>
-    <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
-    </tr>
-    <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
-    </tr>
-    <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
-    </tr>
-    <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
-    </tr>
-    <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
-    </tr>
-    <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
-    </tr>
-    <tr>
-      <td>Nom Jeu 1 <br>Mots clés: 1 2 3</td>
-      <td class="center aligned">14:40</td>
-      <td class="center aligned">3:00</td>
-      <td class="center aligned">4/6</td>
-    </tr>
+    <% } %>
   </tbody>
 </table>
 </div>

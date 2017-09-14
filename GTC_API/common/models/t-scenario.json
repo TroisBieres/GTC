@@ -33,7 +33,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "tSystemes": {
+      "type": "hasOne",
+      "model": "T_Systeme",
+      "foreignKey": "id_Systeme"
+    }
+  },
   "acls": [],
   "methods": {}
 }

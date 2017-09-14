@@ -1,0 +1,115 @@
+{
+  "name": "V_Partie",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Disponibilite": {
+      "type": "number",
+      "id": true
+    },
+    "id_Joueur": {
+      "type": "number",
+      "id": true
+    },
+    "Jou_FirstName": {
+      "type": "string"
+    },
+    "Jou_LastName": {
+      "type": "string"
+    },
+    "Jou_TelNumber": {
+      "type": "string"
+    },
+    "id_Convention": {
+      "type": "number"
+    },
+    "id_Scenario": {
+      "type": "number"
+    },
+    "id_Organisateur": {
+      "type": "number"
+    },
+    "id_Association": {
+      "type": "string"
+    },
+    "Org_FirstName": {
+      "type": "string"
+    },
+    "Org_LastName": {
+      "type": "string"
+    },
+    "Org_NickName": {
+      "type": "string"
+    },
+    "Org_Password": {
+      "type": "string"
+    },
+    "id_Responsabilite": {
+      "type": "number"
+    },
+    "Res_Name": {
+      "type": "string"
+    },
+    "Sce_Name": {
+      "type": "string"
+    },
+    "Sce_NumberOfPlayers": {
+      "type": "number",
+      "required": true
+    },
+    "Sce_Duration": {
+      "type": "string"
+    },
+    "id_Editeur": {
+      "type": "number"
+    },
+    "id_MotCle": {
+      "type": "string"
+    },
+    "Sys_Name": {
+      "type": "string"
+    },
+    "Sys_Quatrieme": {
+      "type": "string"
+    },
+    "Sys_Description": {
+      "type": "string"
+    },
+    "Sys_Website": {
+      "type": "string"
+    },
+    "Edi_Name": {
+      "type": "string"
+    },
+    "Edi_Website": {
+      "type": "string"
+    },
+    "Dis_Schedule": {
+      "type": "date"
+    },
+    "Dis_TableNumber": {
+      "type": "number"
+    },
+    "Con_Name": {
+      "type": "string"
+    },
+    "Con_TableQuantity": {
+      "type": "number"
+    },
+    "Con_StartDate": {
+      "type": "date"
+    },
+    "MCl_Name": {
+      "type": "string"
+    },
+    "Con_EndDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
