@@ -1,7 +1,6 @@
 let connection = require('../config/db')
 
 class Save {
-
   static create (content, callback) {
     console.log('=====!!!!!======')
     console.log(content.tableName)

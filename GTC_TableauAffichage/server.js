@@ -25,6 +25,18 @@ app.listen(8080, function () {
 //          Serveur secondaire pour l'administration
 //
 // /////////////////////////////////////////////////////////////////
+app.get('/accueil', (req, res) => {
+  res.render('pages/accueil/index')
+})
+
+app.listen(8070, function () {
+  console.log('Example app listening on port 8070!')
+})
+// /////////////////////////////////////////////////////////////////
+//
+//          Serveur secondaire pour l'administration
+//
+// /////////////////////////////////////////////////////////////////
 
 let express2 = require('express')
 let app2 = express2()
@@ -86,10 +98,18 @@ app2.get('/Theme', (req, res) => {
   // Methodes POST
 
 app2.post('/', (req, res) => {
-  console.log('========req========')
-//  SaveAPI.setTo(req.body.tableName,)
-  console.log(req.body)
-  res.redirect('/')
+  console.log(req.body.tableName)
+  switch (req.body.tableName) {
+    case 'T_MotCle':
+      console.log('========req========')
+      SaveAPI2.setMotCle(req.body.name, (req, res) => {
+        console.log(req.body)
+        res.redirect('/')
+      })
+      break
+    default:
+      res.redirect('/')
+  }
 })
 
 app2.listen(8090, function () {

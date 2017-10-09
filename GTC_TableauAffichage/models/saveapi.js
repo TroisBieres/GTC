@@ -1,7 +1,7 @@
 class SaveAPI {
   static getAllFrom (table, entry, cb) {
     var request = require('request-promise')
-    var uri = 'http://localhost:3000/api/' + table + 's'
+    var uri = 'http://localhost:5000/api/' + table + 's'
     request({
       'method': 'GET',
       'uri': uri,
@@ -17,7 +17,7 @@ class SaveAPI {
 
   static getAllPlays (cb) {
     var request = require('request-promise')
-    var uri = 'http://localhost:3000/api/V_Parties'
+    var uri = 'http://localhost:5000/api/V_Parties'
     request({
       'method': 'GET',
       'uri': uri,
@@ -83,25 +83,29 @@ class SaveAPI {
           result[result.length - 1].occurency = 1
         }
       }
-//      console.log(result)
       cb({'V_Partie': result})
     }, console.err)
   }
 
-  static setTo (table, entry, cb) {
+  static setMotCle (mclname, cb) {
     var request = require('request-promise')
-    var uri = 'http://localhost:3000/api/' + table + 's'
-    console.log(entry)
+    var uri = 'http://localhost:5000/api/T_MotCles'
+    console.log('/////////////////////////')
+    var json = {
+      'MCl_Name': mclname
+    }
+    console.log(mclname)
+    console.log(json)
+    console.log('/////////////////////////')
     request({
-      'method': 'POST',
+      'method': 'PUT',
       'uri': uri,
-      'json': true,
+      'data': json,
       'headers': {
         'User-Agent': 'Accept: application/json'
       }
     }).then((res, body) => {
-//      entry[table] = res
-      cb(entry)
+      cb()
     }, console.err)
   }
 }

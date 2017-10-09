@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Accueil des Joueurs </title>
+
+  <link rel="stylesheet" href="/assets/semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="assets/semantic/dist/semantic.min.js"></script>
+
+  <style>
+    .fluid.container {
+      margin-top: 3em;
+    }
+  </style>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <script>
+   $(document)
+     .ready(function() {
+       $('.ui.menu .ui.dropdown').dropdown({
+         on: 'hover'
+       });
+       $('.ui.menu a.item')
+         .on('click', function() {
+           $(this)
+             .addClass('active')
+             .siblings()
+             .removeClass('active')
+           ;
+         })
+       ;
+     })
+   ;
+   </script>
+
+</head>
+
+<body>
+    <div class="ui inverted menu">
+      <a class="left item">
+        Convention Name
+      </a>
+      <a class="center item" href="http://localhost:8080/affichage">
+        Association Logo
+      </a>
+      <a class="right item">
+        Se connecter
+      </a>
+    </div>
