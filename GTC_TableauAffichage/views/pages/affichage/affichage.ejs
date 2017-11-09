@@ -1,0 +1,45 @@
+<% include header %>
+<div class="ui fluid container">
+<table class="ui blue inverted striped large table">
+  <thead>
+  <tr>
+    <th class="one wide center aligned">N° Table</th>
+    <th class="six wide">Univers</th>
+    <th class="four wide">Nombre de places</th>
+    <th class="two wide center aligned">Public</th>
+    <th class="two wide center aligned">Début</th>
+    <th class="two wide center aligned">Durée</th>
+
+  </tr>
+  </thead>
+  <tbody>
+    <% for(var i=0;i<res.length;i++) {%>
+    <tr>
+      <td><%= res[i].Dis_TableNumber %></td>
+      <td><%= res[i].Sys_Name %></td>
+      <td>
+        <% if (res[i].Dis_NoPlayer < res[i].Sce_NoPlayerMin) { %>
+          <% for (var j=0;j<res[i].Dis_NoPlayer;) { %>
+            <i class="ui blue circular label"> <%= j++ %> </i>
+          <% } %>
+          <% for (;j<res[i].Sce_NoPlayerMin;) { %>
+            <i class="ui red circular label"> <%= ++j %> </i>
+          <% } %>
+          <% for (;j<res[i].Sce_NoPlayerMax;) { %>
+            <i class="ui circular label"> <%= ++j %> </i>
+          <% } %>
+
+        <% } %>
+        <% if (res[i].Dis_NoPlayer >= res[i].Sce_NoPlayerMin) { %>
+          green
+        <% } %>
+      </td>
+      <td class="center aligned"><%= res[i].Sce_AgeRestriction %></td>
+      <td class="center aligned"><%= res[i].Dis_Schedule %></td>
+      <td class="center aligned">2h</td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+</div>
+<% include footer %>

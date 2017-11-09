@@ -1,7 +1,22 @@
 class SaveAPI {
-  static getAllFrom (table, entry, cb) {
+  static getAllPlays (cb) {
     var request = require('request-promise')
-    var uri = 'http://localhost:5000/api/' + table + 's'
+    var uri = 'http://localhost:5000/api/AllPlays'
+    request({
+      'method': 'GET',
+      'uri': uri,
+      'json': true,
+      'headers': {
+        'User-Agent': 'My little Pony'
+      }
+    }).then((res, body) => {
+      cb(res)
+    }, console.err)
+  }
+
+  static getAllFrom (cb) {
+    var request = require('request-promise')
+    var uri = 'http://localhost:5000/api/AllPlays'
     request({
       'method': 'GET',
       'uri': uri,
@@ -10,12 +25,11 @@ class SaveAPI {
         'User-Agent': 'My little pony'
       }
     }).then((res, body) => {
-      entry[table] = res
-      cb(entry)
+      cb(res)
     }, console.err)
   }
 
-  static getAllPlays (cb) {
+/* static getAllPlays (cb) {
     var request = require('request-promise')
     var uri = 'http://localhost:5000/api/V_Parties'
     request({
@@ -86,6 +100,7 @@ class SaveAPI {
       cb({'V_Partie': result})
     }, console.err)
   }
+  */
 
   static setMotCle (mclname, cb) {
     var request = require('request-promise')

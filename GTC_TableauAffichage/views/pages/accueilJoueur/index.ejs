@@ -1,0 +1,73 @@
+<% include header %>
+<div class="ui main container">
+  <div class="ui middle aligned grid">
+    <% var global = 0 %>
+    <% for (var row = 0; row < res.length/4; row ++) { %>
+      <div class="four column stretched row">
+        <% for(var local = 0; local < 4 && global < res.length; local ++, global ++) { %>
+          <a href="./accueil/jeu">
+            <div class="column">
+              <div class="ui center aligned inverted grey segment">
+                <div class="column">
+                  <img class="ui centered small image" src="http://www.sans-detour.com/wp-content/uploads/2017/09/aventures_lejeu-logo-580-394x263.png">
+                  </br>
+                  <%= res[global].Sys_Name %>
+                  </br>
+                  <div class="ui small label">
+                    <% if (res[global].Dis_NoPlayer < res[global].Sce_NoPlayerMax) { %>
+                      <%= res[global].Sce_NoPlayerMax - res[global].Dis_NoPlayer %> places disponibles
+                    <% } %>
+                  </div>
+                  <h4 class="ui horizontal divider header">HH:MM => HH:MM</h4>
+                </div>
+              </div>
+            </div>
+          </a>
+        <% } %>
+      </div>
+    <% } %>
+  </div>
+</div>
+<!--      <div class="column">
+        <div class="ui center aligned green inverted segment">
+          <a href="./accueil/jeu">
+            <div class="column">
+              <img class="ui centered small image" src="http://vignette3.wikia.nocookie.net/starwars/images/5/52/Force_and_Destiny_logo.png/revision/latest?cb=20151102133120">
+              </br>
+              La ruse de l'oublié
+            </br>
+              <div class="ui small label">
+                3 places disponibles
+              </div>
+              <h4 class="ui horizontal divider header">HH:MM => HH:MM</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="column">
+        <a href="./accueil/jeu">
+          <div class="ui center aligned red inverted segment">
+            <img class="ui centered small image" src="http://vignette3.wikia.nocookie.net/starwars/images/5/52/Force_and_Destiny_logo.png/revision/latest?cb=20151102133120">
+            </br>
+            Kit d'initiation
+          </br>
+            <div class="ui small label">
+              Table complète
+            </div>
+            <h4 class="ui horizontal divider header">HH:MM => HH:MM</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <div class="ui segment">
+          <img class="ui centered small image" src="http://www.ludospherik.fr/c/194-category_default/l-appel-de-cthulhu-v6.jpg">
+          Kit d'initiation
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<% include footer %>

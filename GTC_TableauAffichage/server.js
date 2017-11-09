@@ -12,21 +12,28 @@ app.get('/', (req, res) => {
 })
 
 app.get('/affichage', (req, res) => {
-  SaveAPI.getAllPlays((res2) => {
-    res.render('pages/affichage', res2)
+  SaveAPI.getAllFrom((res2) => {
+    res.render('pages/affichage/affichage', {'res': res2})
   })
-})
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!')
 })
 
 // /////////////////////////////////////////////////////////////////
 //
-//          Serveur secondaire pour l'administration
+//          Serveur secondaire pour l'accueil des joueurs
 //
 // /////////////////////////////////////////////////////////////////
 app.get('/accueil', (req, res) => {
-  res.render('pages/accueil/index')
+  SaveAPI.getAllFrom((res2) => {
+    res.render('pages/accueilJoueur/index', {'res': res2})
+  })
+})
+
+app.get('/accueil/jeu', (req, res) => {
+  res.render('pages/accueilJoueur/pagejeu')
+})
+
+app.get('/accueil/login', (req, res) => {
+  res.render('pages/accueilJoueur/connexion')
 })
 
 app.listen(8070, function () {
