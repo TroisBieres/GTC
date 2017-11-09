@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html>
+<head>
+  <title> Test d'Affichage </title>
+  <link rel="stylesheet" href="/assets/semantic/dist/semantic.min.css">
+  <% include clock %>
+
+  <style>
+    .fluid.container{
+      margin-top: 3em;
+    }
+  </style>
+
+  <style type="text/css">
+body { margin: 0; padding: 0; }
+</style>
+
+</head>
+<body>
+<div class="ui fixed green inverted menu">
+  <a href="/" class="header item"> Salon du Monde Fantastique </a>
+
+  <div class="right menu">
+   <a class="ui item">
+     <div id="ejs_heure"/></div>
+   </a>
+ </div>
+</div>

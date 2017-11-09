@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+  <html>
+<head>
+  <title> Test d'Affichage </title>
+
+  <link rel="stylesheet" type="text/css" href="assets/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="assets/semantic/dist/semantic.min.js"></script>
+
+  <style>
+    .fluid.container{
+      margin-top: 5em;
+    }
+  </style>
+  <script>
+    function openTab(evt, tabName) {
+      var i, segment, tablinks;
+      tabcontent = document.getElementsByClassName("segment");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("ui item");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+      window.location.href='./'+tabName
+    }
+  </script>
+
+  <style type="text/css">
+body { margin: 3em; padding: 0; }
+</style>
+
+
+</head>
+<body>
+<div class="ui fixed green inverted menu">
+  <a href="/" class="header item"> Retour accueil </a>
+ </div>
+
+<div class="ui fluid container">
+
+    <h1>Section Administration</h1>
+
+    <div class="ui top red inverted attached tabular menu">
+  <!--
+      <button class="ui item" onclick="openTab(event, 'Association')"> Association </button>
+  -->
+  <button class="ui item" onclick="openTab(event, 'Convention')"> Convention </button>
+  <button class="ui item" onclick="openTab(event, 'Disponibilite')">Disponibilité</button>
+  <button class="ui item" onclick="openTab(event, 'Partie')"> Partie </button>
+  <button class="ui item" onclick="openTab(event, 'Scenario')"> Scenario </button>
+  <button class="ui item" onclick="openTab(event, 'Systeme')"> Univers </button>
+  <button class="ui item" onclick="openTab(event, 'MotCle')"> Genre </button>
+  <button class="ui item" onclick="openTab(event, 'Theme')">Univers &harr; Genre</button>
+</div>
+
+<div id="Association" class="ui bottom attached tab segment"></div>
+<div id="Convention" class="ui bottom attached tab segment"></div>
+<div id="Disponibilite" class="ui bottom attached tab segment"></div>
+<div id="Partie" class="ui bottom attached tab segment"></div>
+<div id="Scenario" class="ui bottom attached tab segment"></div>
+<div id="MotCle" class="ui bottom attached tab segment"></div>
+<div id="Theme" class="ui bottom attached tab segment"></div>
+<div id="Systeme" class="ui bottom attached tab segment"></div>

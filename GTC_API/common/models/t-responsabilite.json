@@ -1,0 +1,21 @@
+{
+  "name": "T_Responsabilite",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Responsabilite": {
+      "type": "number",
+      "id": true
+    },
+    "Res_Name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

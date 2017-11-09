@@ -1,0 +1,33 @@
+{
+  "name": "T_Convention",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Convention": {
+      "type": "number",
+      "id": true
+    },
+    "Con_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Con_TableQuantity": {
+      "type": "number",
+      "required": true
+    },
+    "Con_StartDate": {
+      "type": "date",
+      "required": true
+    },
+    "Con_EndDate": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

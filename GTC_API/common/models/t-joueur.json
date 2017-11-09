@@ -1,0 +1,33 @@
+{
+  "name": "T_Joueur",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Joueur": {
+      "type": "number",
+      "id": true
+    },
+    "Jou_FirstName": {
+      "type": "string",
+      "required": true
+    },
+    "Jou_LastName": {
+      "type": "string",
+      "required": true
+    },
+    "Jou_Mail": {
+      "type": "string",
+      "required": false
+    },
+    "Jou_TelNumber": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

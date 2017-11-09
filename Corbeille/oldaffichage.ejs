@@ -1,0 +1,26 @@
+<% include header %>
+<div class="ui fluid container">
+<table class="ui blue inverted striped large table">
+  <thead>
+  <tr>
+    <th class="ten wide">Scénario</th>
+    <th class="two wide center aligned">Début</th>
+    <th class="two wide ">Durée</th>
+    <th class="two wide">Nombre de places</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% for(var i=0; i < V_Partie.length; i++) {%>
+    <tr>
+      <td><%= V_Partie[i].Sys_Name %> - <%= V_Partie[i].Sce_Name %><br>
+        <%= V_Partie[i].MCl_Name %></td>
+      <td class="center aligned"><%= V_Partie[i].Dis_Schedule %></td>
+      <td class="center aligned"><%= V_Partie[i].Sce_Duration %></td>
+      <td class="center aligned"><%= V_Partie[i].occurency %> /
+      <%= V_Partie[i].Sce_NumberOfPlayers %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+</div>
+<% include footer %>

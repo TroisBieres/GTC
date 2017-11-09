@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "T_Association": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Responsabilite": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Editeur": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_MotCle": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Theme": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Partie": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Joueur": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Convention": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Disponibilite": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "V_Disponibilite": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Scenario": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "V_Scenario": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "T_Systeme": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  },
+  "V_Partie": {
+    "dataSource": "GTC_DataBase",
+    "public": true
+  }
+}

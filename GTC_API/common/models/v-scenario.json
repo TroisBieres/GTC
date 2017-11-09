@@ -1,0 +1,43 @@
+{
+  "name": "V_Scenario",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Scenario": {
+      "type": "number",
+      "id": true
+    },
+    "Sce_Name": {
+      "type": "string"
+    },
+    "Sce_NumberOfPlayers": {
+      "type": "number",
+      "required": true
+    },
+    "Sce_Duration": {
+      "type": "number",
+      "required": true
+    },
+    "Sce_Description": {
+      "type": "string"
+    },
+    "Sys_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Org_FirstName": {
+      "type": "string",
+      "required": true
+    },
+    "Org_LastName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

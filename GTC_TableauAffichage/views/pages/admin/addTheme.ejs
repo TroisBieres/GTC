@@ -1,0 +1,37 @@
+<% include header %>
+ <form class="ui form" method="post" action="/">
+   <input type="hidden" name="tableName" value="<T_Theme">
+    <h4 class="ui dividing header">Ajout d'un genre à un univers: </h4>
+    <div class="field">
+      <label for="idsystem">Univers de jeu</label>
+      <select   class="ui fluid dropdown"
+                id="idsystem"
+                name="idsystem"
+                required>
+        <option value="" selected disabled>Choisir un univers</option>
+        <% for(var i=0; i < T_Systeme.length; i++) {%>
+          <option value=<%= T_Systeme[i].id_Systeme %>>
+            <%= T_Systeme[i].Sys_Name %>
+          </option>
+        <% } %>
+      </select>
+    </div>
+    <div class="field">
+      <label for="scenario">Genre</label>
+      <select  class="ui fluid dropdown"
+               id="idmotcle"
+               name="idmotcle"
+               required>
+        <option value="" selected disabled>Choisir un genre</option>
+        <% for(var i=0; i < T_MotCle.length; i++) {%>
+          <option value=<%= T_MotCle[i].id_MotCle %>>
+            <%= T_MotCle[i].MCl_Name %>
+          </option>
+        <% } %>
+      </select>
+    </div>
+    <button type="submit" class="ui blue labeled submit icon button">
+      <i class="icon edit"></i> Envoyer
+    </button>
+</form>
+<% include footer %>

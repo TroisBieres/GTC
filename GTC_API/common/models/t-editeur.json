@@ -1,0 +1,25 @@
+{
+  "name": "T_Editeur",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Editeur": {
+      "type": "number",
+      "id": true
+    },
+    "Edi_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Edi_Website": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

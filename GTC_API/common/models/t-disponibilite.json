@@ -1,0 +1,32 @@
+{
+  "name": "T_Disponibilite",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Disponibilite": {
+      "type": "number",
+      "id": true
+    },
+    "Dis_Schedule": {
+      "type": "number",
+      "required": true
+    },
+    "Dis_TableNumber": {
+      "type": "number"
+    },
+    "id_Convention": {
+      "type": "number",
+      "required": true
+    },
+    "id_Scenario": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "GTC_DataBase": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "url": "",
+    "database": "GestionTableConv",
+    "password": "testuser",
+    "name": "GTC_DataBase",
+    "user": "testuser",
+    "connector": "mysql"
+  }
+}

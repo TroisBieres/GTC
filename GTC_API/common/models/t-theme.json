@@ -1,0 +1,23 @@
+{
+  "name": "T_Theme",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Systeme": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "id_MotCle": {
+      "type": "number",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

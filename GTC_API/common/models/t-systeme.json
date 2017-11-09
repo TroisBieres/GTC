@@ -1,0 +1,37 @@
+{
+  "name": "T_Systeme",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_Systeme": {
+      "type": "number",
+      "id": true
+    },
+    "Sys_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Sys_Quatrieme": {
+      "type": "string",
+      "required": true,
+      "default": " "
+    },
+    "Sys_Description": {
+      "type": "string",
+      "required": true
+    },
+    "Sys_Website": {
+      "type": "string",
+      "required": true
+    },
+    "id_Editeur": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
